@@ -1,7 +1,7 @@
 package ua.oopExample;
 
 //4erteg
-public class Bear {
+public class Bear{
     private String name;
     private int age;
 

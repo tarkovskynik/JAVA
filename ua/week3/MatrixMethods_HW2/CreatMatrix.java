@@ -1,4 +1,4 @@
-package ua.week3.MatrixMethods_HW_1;
+package ua.week3.MatrixMethods_HW2;
 
 public class CreatMatrix {
 
