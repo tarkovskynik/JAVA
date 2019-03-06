@@ -18,7 +18,7 @@ public class MyArrayList implements MyList {
     }
 
     @Override
-    public void remove(int index) {
+    public Object remove(int index) {
 
         for (int i = 0; i < size; i++) {
             if (mas[i] != null) {
@@ -27,6 +27,7 @@ public class MyArrayList implements MyList {
             mas[i] = mas[i + 1];
             size--;
         }
+        return index;// ??????
     }
 
     @Override
