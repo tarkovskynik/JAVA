@@ -4,17 +4,11 @@ public interface MyList {
 
     boolean add(Object o);
 
-    boolean remove(Object o);
-
-    Object remove(int index);
+    boolean remove(int index);
 
     int size();
 
-    boolean isEmpty();
-
-    String greating();
-
-    boolean get(Object o);
+    boolean isEmpty(int index);
 
     Object get(int index);
 }

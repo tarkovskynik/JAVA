@@ -1,30 +1,29 @@
 package ua.Course2.week3.ArrayList;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SeregaTemplate {
 
 
     public static void main(String[] args) {
 
-        List<String> arrayList = new ArrayList<>();
+        //   List<String> myArrayList = new ArrayList<>();
+        MyArrayList myArrayList = new MyArrayList();
 
         String one = "Hello";
         String two = "Nikita";
 
-        arrayList.add(one);
-        arrayList.add(two);
+        myArrayList.add(one);
+        myArrayList.add(two);
 
-        arrayList.remove(1);
+        myArrayList.remove(1);
 
-        String sentence = arrayList.toString();
+        String sentence = myArrayList.toString();
 
-        for (int i = 0; i < arrayList.size(); i++) {
-            System.out.print(arrayList.get(i) + " ");
+        for (int i = 0; i < myArrayList.size(); i++) {
+            System.out.print(myArrayList.get(i) + " ");
         }
-        System.out.println();
+        System.out.println(myArrayList.isEmpty(0));
 
-        System.out.println(sentence);
+
+        System.out.println();
     }
 }

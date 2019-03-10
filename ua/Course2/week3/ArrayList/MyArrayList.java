@@ -13,21 +13,16 @@ public class MyArrayList implements MyList {
     }
 
     @Override
-    public boolean remove(Object o) {
-        return false;
-    }
+    public boolean remove(int index) {
 
-    @Override
-    public Object remove(int index) {
-
-        for (int i = 0; i < size; i++) {
+        for (int i = index; i < size; i++) {
             if (mas[i] != null) {
                 mas[i] = null;
             }
             mas[i] = mas[i + 1];
             size--;
         }
-        return index;// ??????
+        return true;
     }
 
     @Override
@@ -37,18 +32,15 @@ public class MyArrayList implements MyList {
     }
 
     @Override
-    public boolean isEmpty() {
-        return false;
-    }
+    public boolean isEmpty(int index) {
+        boolean result = true;
+        if(mas[index] == null){
+            result = true;
+        } else {
+            result = false;
+        }
 
-    @Override
-    public String greating() {
-        return null;
-    }
-
-    @Override
-    public boolean get(Object o) {
-        return false;
+        return result;
     }
 
     @Override
