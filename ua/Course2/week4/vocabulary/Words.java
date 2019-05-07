@@ -1,6 +1,8 @@
 package ua.Course2.week4.vocabulary;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Words {
 
@@ -15,18 +17,18 @@ public class Words {
         this.translation = translation;
     }
 
-    public String initWord() {
-        Scanner str = new Scanner(System.in);
+    public String initWord() throws IOException {
+        BufferedReader str = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the word: ");
-        setWord(str.next());
+        setWord(str.readLine());
         setWord(word);
         return word;
     }
 
-    public String initTranslation() {
-        Scanner str1 = new Scanner(System.in);
+    public String initTranslation() throws IOException {
+        BufferedReader str1 = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the translation: ");
-        setTranslation(str1.next());
+        setTranslation(str1.readLine());
         setTranslation(translation);
         return translation;
     }

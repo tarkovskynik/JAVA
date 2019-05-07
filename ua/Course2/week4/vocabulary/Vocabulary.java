@@ -1,32 +1,29 @@
 package ua.Course2.week4.vocabulary;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
 
 public class Vocabulary extends Words {
 
-    Words words = new Words();
+   // Words words = new Words();
 
-    Map<String, String> mapVocabulary = new HashMap<String, String>();
+    MyHashMap myHashMap = new MyHashMap();
 
-    public void addWords() {
-        mapVocabulary.put(initWord(), initTranslation());
+    public void addWords() throws IOException {
+        myHashMap.mapVocabulary.put(initWord(), initTranslation());
     }
 
-    public void creatWordInDictionary(){
+    public void creatWordInDictionary() throws IOException {
         addWords();
     }
 
+
     public String asString() {
         String result = "";
-        for (int i = 0; i < mapVocabulary.size(); i++) {
 
-            result = result + mapVocabulary.toString() + "\n";
+        result = myHashMap.mapVocabulary.toString() + "\n";
 
-        }
         return result;
     }
-
 
 
 
