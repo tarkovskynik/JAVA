@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class VocabularyMenu extends Vocabulary {
+public class VocabularyMenu {
+
+    Vocabulary vocabulary = new Vocabulary();
 
     private void showMainMenu() {
         System.out.println("1. Add new word");
@@ -25,15 +27,16 @@ public class VocabularyMenu extends Vocabulary {
             System.out.println(choice);
             switch (choice) {
                 case 1:
-                    creatWordInDictionary();
+                    vocabulary.creatWordInDictionary();
                     break;
                 case 2:
-                    System.out.print(asString());
+                    System.out.print(vocabulary.asString());
                     break;
                 case 3:
-
+                    vocabulary.findWord();
                     break;
                 case 4:
+                    vocabulary.deleteWord();
             }
             if (choice == 5) {
                 break;

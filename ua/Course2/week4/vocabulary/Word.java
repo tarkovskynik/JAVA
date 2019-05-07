@@ -1,9 +1,5 @@
 package ua.Course2.week4.vocabulary;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Word {
 
     private String word = "";
@@ -17,19 +13,11 @@ public class Word {
         this.translation = translation;
     }
 
-    public String initWord() throws IOException {
-        BufferedReader str = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the word: ");
-        setWord(str.readLine());
-        setWord(word);
+    public String getWord() {
         return word;
     }
 
-    public String initTranslation() throws IOException {
-        BufferedReader str1 = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the translation: ");
-        setTranslation(str1.readLine());
-        setTranslation(translation);
+    public String getTranslation() {
         return translation;
     }
 
