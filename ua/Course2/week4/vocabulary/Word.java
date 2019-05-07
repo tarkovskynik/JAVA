@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Words {
+public class Word {
 
     private String word = "";
     private String translation = "";
