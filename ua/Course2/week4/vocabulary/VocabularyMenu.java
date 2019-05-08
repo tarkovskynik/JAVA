@@ -1,12 +1,11 @@
 package ua.Course2.week4.vocabulary;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class VocabularyMenu {
 
-    Vocabulary vocabulary = new Vocabulary();
+    private Vocabulary vocabulary = new Vocabulary();
+    private ConsoleReader consoleReader = new ConsoleReader();
 
     private void showMainMenu() {
         System.out.println("1. Add new word");
@@ -21,9 +20,7 @@ public class VocabularyMenu {
         while (true) {
             showMainMenu();
             System.out.print("Enter the number: ");
-            BufferedReader number = new BufferedReader(new InputStreamReader(System.in));
-            String numb = number.readLine();
-            int choice = Integer.parseInt(numb);
+            int choice = consoleReader.bufferReaderInt();
             System.out.println(choice);
             switch (choice) {
                 case 1:
