@@ -3,7 +3,6 @@ package ua.Course2.week4.vocabulary;
 import java.io.IOException;
 
 public class VocabularyMenu {
-
     private Vocabulary vocabulary = new Vocabulary();
     private ConsoleReader consoleReader = new ConsoleReader();
 
@@ -16,7 +15,6 @@ public class VocabularyMenu {
     }
 
     public void statrProgram() throws IOException {
-
         while (true) {
             showMainMenu();
             System.out.print("Enter the number: ");

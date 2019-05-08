@@ -5,9 +5,7 @@ import ua.Course2.week4.hashMap.HashMap;
 import java.util.Map;
 
 public class MyHashMap extends HashMap {
-
     Map<String, Word> mapVocabulary = new java.util.HashMap<String, Word>();
-
     String key = new String();
 
     /* public String toString() {
