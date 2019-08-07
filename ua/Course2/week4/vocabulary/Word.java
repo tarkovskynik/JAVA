@@ -6,10 +6,12 @@ public class Word {
     private String translation = "";
 
     public void setWord(String word) {
+
         this.word = word;
     }
 
     public void setTranslation(String translation) {
+
         this.translation = translation;
     }
 

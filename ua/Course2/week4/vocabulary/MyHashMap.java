@@ -1,11 +1,10 @@
 package ua.Course2.week4.vocabulary;
 
-import ua.Course2.week4.hashMap.HashMap;
-
+import java.util.HashMap;
 import java.util.Map;
 
-public class MyHashMap extends HashMap {
-    Map<String, Word> mapVocabulary = new java.util.HashMap<String, Word>();
+public class MyHashMap {
+    Map<String, Word> mapVocabulary = new HashMap<String, Word>();
     String key = new String();
 
     /* public String toString() {

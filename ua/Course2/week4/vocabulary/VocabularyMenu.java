@@ -7,6 +7,7 @@ public class VocabularyMenu {
     private ConsoleReader consoleReader = new ConsoleReader();
 
     private void showMainMenu() {
+        System.out.println();
         System.out.println("1. Add new word");
         System.out.println("2. Show all words");
         System.out.println("3. Find Word");
@@ -15,11 +16,14 @@ public class VocabularyMenu {
     }
 
     public void statrProgram() throws IOException {
+
+
         while (true) {
             showMainMenu();
-            System.out.print("Enter the number: ");
-            int choice = consoleReader.bufferReaderInt();
-            System.out.println(choice);
+            System.out.println("Enter the number: ");
+            try {
+                int choice = consoleReader.bufferReaderInt();
+                //System.out.println(choice);
             switch (choice) {
                 case 1:
                     vocabulary.creatWordInDictionary();
@@ -36,6 +40,9 @@ public class VocabularyMenu {
             if (choice == 5) {
                 break;
             }
+            } catch (NumberFormatException e){
+                System.err.print("Error! Enter the number please");
+        }
         }
     }
 }
