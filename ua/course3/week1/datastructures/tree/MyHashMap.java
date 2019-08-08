@@ -1,6 +1,7 @@
 package ua.course3.week1.datastructures.tree;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -58,9 +59,15 @@ public class MyHashMap<K,V> implements Map<K,V> {
         return false;
     }
 
+
     @Override
     public V get(Object key) {
-        return null;
+        int hash = Math.abs(key.hashCode());
+        int position = hash % table.length;
+
+        MyNode<K,V> e = table[position];
+
+        return (e  == null ? null : e.value);
     }
 
     @Override
@@ -116,5 +123,44 @@ public class MyHashMap<K,V> implements Map<K,V> {
     @Override
     public Set<Entry<K, V>> entrySet() {
         return null;
+    }
+
+    class  MyHashMapIterator implements Iterator<MyNode<K,V>>{
+
+        int currentIndex;
+
+        MyNode<K,V> currentNode;
+
+        public MyHashMapIterator() {
+
+            findFirstNonNull();
+        }
+
+            private void findFirstNonNull() {
+                for (; currentIndex < table.length && table[currentIndex] == null; currentIndex++) {
+
+                }
+                if (currentIndex < table.length) {
+                    currentNode = table[currentIndex];
+                } else {
+                    currentNode = null;
+                }
+            }
+
+        @Override
+        public boolean hasNext() {
+            return currentNode != null;
+        }
+
+        @Override
+        public MyNode<K, V> next() {
+            MyNode<K,V> retur = currentNode;
+            if(currentNode.next != null){
+                currentNode = currentNode.next;
+            } else {
+                findFirstNonNull();
+            }
+            return retur;
+        }
     }
 }

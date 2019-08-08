@@ -11,13 +11,13 @@ public class MyNode<K,V> {
     V value;
     MyNode<K, V> next;
 
+
     public MyNode(K key, V value, MyNode<K, V> next) {
 
         this.key = key;
         this.value = value;
         this.next = next;
     }
-
 
 
     public K getKey() {
