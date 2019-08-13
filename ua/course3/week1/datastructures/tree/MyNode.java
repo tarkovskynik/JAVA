@@ -45,7 +45,6 @@ public class MyNode<K,V> {
         return Objects.hashCode(key) ^ Objects.hashCode(value);
     }
 
-
     @Override
 
     public final boolean equals(Object o) {

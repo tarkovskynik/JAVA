@@ -14,6 +14,12 @@ public class MyHashMap<K,V> implements Map<K,V> {
 
     private int size;
 
+    public int indexMap(Object key){
+        int hash = Math.abs(key.hashCode());
+        int position = hash % table.length;
+        return position;
+    }
+
     @Override
     public V getOrDefault(Object key, V defaultValue) {
         return null;
@@ -62,23 +68,19 @@ public class MyHashMap<K,V> implements Map<K,V> {
 
     @Override
     public V get(Object key) {
-        int hash = Math.abs(key.hashCode());
-        int position = hash % table.length;
 
-        MyNode<K,V> e = table[position];
+        MyNode<K,V> e = table[indexMap(key)];
 
         return (e  == null ? null : e.value);
     }
 
     @Override
     public V put(K key, V value) {
-        int hash = Math.abs(key.hashCode());
-        int position = hash % table.length;
 
-        if (table[position] == null) {
-            table[position] = new MyNode<K, V>(key, value, null);
+        if (table[indexMap(key)] == null) {
+            table[indexMap(key)] = new MyNode<K, V>(key, value, null);
         } else {
-            MyNode<K, V> iter = table[position];
+            MyNode<K, V> iter = table[indexMap(key)];
 
             do {
                 if (iter.key.equals(key)) {

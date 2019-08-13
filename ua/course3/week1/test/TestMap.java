@@ -13,11 +13,12 @@ public class TestMap {
 
         map.put(1, "nik");
         map.put(1, "nik");
+        map.put(2,"kit");
 
         boolean putRes = map.size() == 1;
 
         System.out.println(putRes);
-        System.out.println(map.get(1));
+        System.out.println(map.get(2));
 
         String key = "Nikita";
         int key1 = Math.abs(key.hashCode());
