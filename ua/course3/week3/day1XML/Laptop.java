@@ -1,4 +1,4 @@
-package ua.course3.week3.week1;
+package ua.course3.week3.day1XML;
 
 public class Laptop {
 

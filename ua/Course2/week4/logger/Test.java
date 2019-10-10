@@ -1,7 +1,7 @@
 package ua.Course2.week4.logger;
 
 
-import org.apache.log4j.Logger;
+/* import org.apache.log4j.Logger;
 
 public class Test {
 
@@ -13,3 +13,4 @@ public class Test {
         logger.info("Hello  Nikitos");
     }
 }
+*/

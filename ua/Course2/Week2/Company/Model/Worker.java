@@ -6,8 +6,6 @@ public class Worker {
     private double salary;
     private String phone;
 
-    public Worker() {
-    }
 
     public Worker(int id, String name, double salary, String phone) {
         this.id = id;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<computerMagazin>
+<computerShop>
     <laptops>
     <laptop id="123465443" model="HG-543" video="Radeon 555x"/>
         <laptop id="9876543" model="TT-873" video="NVideo 32222111ll"/>
         <laptop id="1000033333" model="MK-098" video="GeFORCE 8833"/>
         </laptops>
 
-</computerMagazin>
+</computerShop>
