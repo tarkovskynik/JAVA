@@ -1,10 +1,31 @@
-package ua.task;
+package ua.tasks.task1;
 
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        // Задание: есть мапа Map<String,SomeObject> у SomeObject есть List<String>, в мапе 10 SomeObject-ов в какихто есть лист в каких-то нету, нужно удалить из мапы ту пару ключ значение у которой в листе у SomeObject есть стринга «hello» или стринга «bye-bye»
+
+
+        String src = "Hello 123 Nikita ";
+        src.split("123");
+
+        for (String res: src.split("123")) {
+            System.out.println(res);
+            
+        }
+
+        List asd = new LinkedList();
+        asd.add("123");
+        asd.add("456");
+
+
+        for (Object a: asd) {
+            System.out.println(a);
+        }
+        //System.out.println(src.split("123"));
 
         SomeObject someObject1 = new SomeObject(new ArrayList<>());
         someObject1.list.add("bye-bye");
@@ -72,7 +93,7 @@ public class Main {
             if (list1 != null && (list1.contains("hello") || list1.contains("bye-bye"))) {
 
                 // System.out.println(getKey);
-                myHashMap.map.remove(getKey); - ремув не работает в итераторе
+                myHashMap.map.remove(getKey);  //- ремув не работает в итераторе
             }
             // System.out.println(entry.getValue());
         } */

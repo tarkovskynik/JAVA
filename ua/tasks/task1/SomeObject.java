@@ -1,4 +1,4 @@
-package ua.task;
+package ua.tasks.task1;
 
 import java.util.List;
 
